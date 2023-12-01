@@ -13,11 +13,13 @@ int main(int argc, char *argv[])
   while (std::getline(file, line))
   {
     std::vector<int> digits;
-	for (auto c: line) {
-	  if (isdigit(c)) {
-		digits.push_back(c - '0');
-	  }
-	}
+    for (auto c : line)
+    {
+      if (isdigit(c))
+      {
+        digits.push_back(c - '0');
+      }
+    }
     calibration_sum += digits[0] * 10 + digits.back();
   }
 
